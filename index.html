@@ -15,7 +15,6 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
-/* BACKGROUND TIM */
 #bg {
   position: fixed;
   inset: 0;
@@ -23,7 +22,6 @@ html, body {
   pointer-events: none;
 }
 
-/* KHÔNG GIAN 3D CHỮ */
 #scene {
   position: fixed;
   inset: 0;
@@ -39,7 +37,6 @@ html, body {
   transform: translate(-50%, -50%);
 }
 
-/* CHỮ */
 .text {
   position: absolute;
   color: #ff6fae;
@@ -53,7 +50,6 @@ html, body {
   to   { transform: translate3d(var(--x), calc(var(--y) - 420px), var(--z)); opacity: 1; }
 }
 
-/* TIM BACKGROUND */
 .heart {
   position: absolute;
   color: rgba(255, 77, 148, 0.25);
@@ -77,16 +73,11 @@ html, body {
 
 <script>
 const wishes = [
-  "Chúc bạn luôn vui vẻ!",
-  "Chúc bạn học hành tiến bộ!",
-  "Chúc bạn gặp nhiều may mắn!",
-  "Chúc bạn ngày càng xinh đẹp!",
-  "Chúc bạn mọi điều tốt lành!",
-  "Chúc bạn thành công rực rỡ!",
-  "Chúc bạn luôn tự tin!",
-  "Chúc bạn sức khỏe dồi dào!",
-  "Chúc bạn nhiều niềm vui!",
-  "Chúc bạn luôn hạnh phúc!"
+  "Chúc tập thể AV2K16 luôn đạt được nhưng điều mong muốn",
+  "Ngày càng xinh trai,đẹp gái",
+  "Luôn hạnh phúc trên con đường đã chọn",
+  "Chúc AV2K16 một năm mới bình an",
+  "Đầm ấm bên gia đình",
 ];
 
 const world = document.getElementById("world");
@@ -96,7 +87,6 @@ function textSize() {
   return Math.max(14, Math.min(22, window.innerWidth / 20)) + "px";
 }
 
-/* CHỮ */
 setInterval(() => {
   const el = document.createElement("div");
   el.className = "text";
@@ -118,7 +108,6 @@ setInterval(() => {
   setTimeout(() => el.remove(), 20000);
 }, 300);
 
-/* TIM BACKGROUND */
 setInterval(() => {
   const h = document.createElement("div");
   h.className = "heart";
@@ -131,7 +120,6 @@ h.style.animationDuration = (8 + Math.random() * 8) + "s";
   setTimeout(() => h.remove(), 16000);
 }, 400);
 
-/* XOAY 3D */
 let rx = 0, ry = 0, drag = false, lx = 0, ly = 0;
 
 function update() {
@@ -166,3 +154,4 @@ document.addEventListener("touchmove", e => {
 
 </body>
 </html>
+
